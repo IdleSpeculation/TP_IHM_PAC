@@ -7,9 +7,9 @@ public class Presentation {
 	private Button diminuer; 
 	private Button raz; 
 	public Presentation () {
-		this.augmenter =  new Button("augmenter");
-		this.diminuer =  new Button("diminuer");
-		this.raz =  new Button("raz");
+		this.augmenter =  new Button("Augmenter");
+		this.diminuer =  new Button("Diminuer");
+		this.raz =  new Button("Raz");
 
 	}
 	public Button getAugmenter() {

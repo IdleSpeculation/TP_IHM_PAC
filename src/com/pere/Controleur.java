@@ -33,6 +33,7 @@ public class Controleur extends ControleurPere{
 	public void update(String action) {
 		// TODO Auto-generated method stub
 		int temp = this.abstraction.getTemperature();
+		System.out.print(action);
 		if (action=="Augmenter") {
 			this.abstraction.setTemperature(temp+10);
 			this.presentation.getSeries().getData().add(new XYChart.Data(this.presentation.getSeries().getData().size(), temp+10));
@@ -49,6 +50,12 @@ public class Controleur extends ControleurPere{
 			this.presentation.getSeries().getData().add(new XYChart.Data(this.presentation.getSeries().getData().size(), 0));
 			notifFils(0);
 
+		}
+		else if (action=="Afficher_Tableau") {
+			this.presentation.getHbox().getChildren().add(this.presentation.getTableView());
+		}
+		else if (action=="Cacher_Tableau") {
+			this.presentation.getHbox().getChildren().remove(this.presentation.getTableView());
 		}
 		else {
 			this.abstraction.setTemperature(Integer.parseInt(action));

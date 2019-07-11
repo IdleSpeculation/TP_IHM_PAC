@@ -15,7 +15,7 @@ public class Presentation {
 		
         this.textField = new TextField();
         this.textField.setText("0");
-        this.label = new Label("this is it");
+        this.label = new Label("Tepérature (Celsus) : ");
         this.button = new Button("Valider");
 
         this.textField.textProperty().addListener(new ChangeListener<String>() {
